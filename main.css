@@ -27,6 +27,7 @@ h1 {
 
 .market, .agents, .comp-structure, .output {
 	background-size: cover;
+	overflow: hidden;
 }
 
 .market, .agents, .comp-structure {
@@ -60,6 +61,8 @@ h1 {
 
 .big-submit-button {
 	clear: both;
+	padding: 3em;
+	text-align: center;
 }
 
 .output{
