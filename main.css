@@ -1,0 +1,63 @@
+/* ROI Calculator main css */
+
+
+html,body{
+	margin: 0px;
+	padding: 0px;
+	font-family: Helvetica;
+}
+
+.main-container{
+	width: 100%;
+}
+
+.roi-section{
+	height: 500px;
+	width: 100%;
+	position: relative;
+}
+
+.roi-section h2{
+	color: white;
+	text-align: center;
+}
+
+/* Containers for each section */
+.market{
+	background-color: red;
+	width: 33.333%;
+	float:left;
+}
+
+.agents{
+	background-color: green;
+	width: 33.333%;
+	float:left;
+}
+
+.comp-structure{
+	background-color: blue;
+	width: 33.333%;
+	float:left;
+}
+
+.output{
+	height: 100%;
+	background-color: gray;
+	clear: left;
+}
+
+.form-container{
+	margin-top: 50px;
+	width: 100%;
+}
+
+form{
+	text-align: center;
+
+}
+input, label{
+	height: 30px;
+	width: 50%;
+	margin: 20px 0;
+}
