@@ -7,6 +7,7 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="roi.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
 <link rel="stylesheet" type="text/css" href="main.css">
 
 </head>
@@ -17,81 +18,89 @@
 		<h1>ROI Calculator</h1>
 
 		<div class="roi-section market">
-			<h2>Market</h2>
-			<div class="form-container">
-				<form>
-				  <label for="home-price">Average Home Price</label><br>
-				  <input type="number" name="home-price" id="home-price" value="350000">
-				</form>
+			<div class="overlay">
+				<h2>Market</h2>
+				<div class="form-container">
+					<form>
+					  <label for="home-price">Average Home Price</label><br>
+					  <input type="number" name="home-price" id="home-price" value="350000">
+					</form>
+				</div>
 			</div>
 		</div>
 		<div class="roi-section agents">
-			<h2>Agents</h2>
-			<div class="form-container">
-				<form>
-				  <label for="transactions-per-year">Number of Transactions Per Year</label><br>
-				  <input type="number" name="transactions-per-year" id="transactions-per-year" value="15"><br>
-				  <label for="agents">How many agents are at the brokerage?</label><br>
-				  <input type="number" name="agents" id="agents" value="180"><br>
-				  <label for="cap-out">What % cap out?</label><br>
-				  <input type="number" name="cap-out" id="cap-out" value=".2"><br>
-				</form>
+			<div class="overlay">
+				<h2>Agents</h2>
+				<div class="form-container">
+					<form>
+					  <label for="transactions-per-year">Number of Transactions Per Year</label><br>
+					  <input type="number" name="transactions-per-year" id="transactions-per-year" value="15"><br>
+					  <label for="agents">How many agents are at the brokerage?</label><br>
+					  <input type="number" name="agents" id="agents" value="180"><br>
+					  <label for="cap-out">What % cap out?</label><br>
+					  <input type="number" name="cap-out" id="cap-out" value=".2"><br>
+					</form>
+				</div>
 			</div>
 		</div>
 		<div class="roi-section comp-structure">
-			<h2>Comp Structure</h2>
-			<div class="form-container">
-				<form>
-					<label for="agent-split">Agent's Split</label><br>
-				  <input type="number" id="agent-split" value=".7"><br>
-					<label for="broker-split">Broker Split</label><br>
-				  <input type="number" id="broker-split" value=".3"><br>
-				  <label for="commission-percent">Commission %</label><br>
-				  <input type="number" id="commission-percent" value=".03"><br>
-				  <label for="referral-percent">What % of My Business Comes from Referrals?</label><br>
-				  <input type="number" id="referral-percent" value=".5"><br>
-				</form>
+			<div class="overlay">
+				<h2>Comp Structure</h2>
+				<div class="form-container">
+					<form>
+						<label for="agent-split">Agent's Split</label><br>
+					  <input type="number" id="agent-split" value=".7"><br>
+						<label for="broker-split">Broker Split</label><br>
+					  <input type="number" id="broker-split" value=".3"><br>
+					  <label for="commission-percent">Commission %</label><br>
+					  <input type="number" id="commission-percent" value=".03"><br>
+					  <label for="referral-percent">What % of My Business Comes from Referrals?</label><br>
+					  <input type="number" id="referral-percent" value=".5"><br>
+					</form>
+				</div>
 			</div>
 		</div>
 
-		<div><button>The big submit button</button></div>
+		<div class="big-submit-button"><button>The big submit button</button></div>
 
 		<div class="roi-section output">
-			<h2>ROI</h2>
-			<div class="form-container">
-				<form>
-					<label for="agent-commission-transaction">Agent's Commission (Per Transaction)</label><br>
-					<input type="number" id="agent-commission" value=""><br>
-					
-					<label for="broker-commission-transaction">Brokerage Commission (Per Transaction)</label><br>
-					<input type="number" id="broker-commission" value=""><br>
-					
-					<label for="number-referrals"># of Transactions that come from Referrals</label><br>
-					<input type="number" id="number-referrals" value=""><br>
-					
-					<label for="transactions-gained">How many Transactions will I gain if I use Contactually?</label><br>
-					<input type="number" id="transactions-gained" value=""><br>
+			<div class="overlay">
+				<h2>ROI</h2>
+				<div class="form-container">
+					<form>
+						<label for="agent-commission-transaction">Agent's Commission (Per Transaction)</label><br>
+						<input type="number" id="agent-commission" value=""><br>
+						
+						<label for="broker-commission-transaction">Brokerage Commission (Per Transaction)</label><br>
+						<input type="number" id="broker-commission" value=""><br>
+						
+						<label for="number-referrals"># of Transactions that come from Referrals</label><br>
+						<input type="number" id="number-referrals" value=""><br>
+						
+						<label for="transactions-gained">How many Transactions will I gain if I use Contactually?</label><br>
+						<input type="number" id="transactions-gained" value=""><br>
 
-					<label for="agent-money-gained">How much money would Contactually bring the agent?</label><br>
-					<input type="number" id="agent-money-gained" value=""><br>
-					
-					<label for="brokerage-money-gained">How much money would Contactually bring the brokerage?</label><br>
-					<input type="number" id="brokerage-money-gained" value=""><br>
-					
-					<label for="agents-improved">How many agents could improve performance?</label><br>
-					<input type="number" id="agents-improved" value=""><br>
+						<label for="agent-money-gained">How much money would Contactually bring the agent?</label><br>
+						<input type="number" id="agent-money-gained" value=""><br>
+						
+						<label for="brokerage-money-gained">How much money would Contactually bring the brokerage?</label><br>
+						<input type="number" id="brokerage-money-gained" value=""><br>
+						
+						<label for="agents-improved">How many agents could improve performance?</label><br>
+						<input type="number" id="agents-improved" value=""><br>
 
-					<label for="agent-adoption">What percentage of those agents would actually adopt Contactually?</label><br>
-					<input type="number" id="agent-adoption" value=""><br>
+						<label for="agent-adoption">What percentage of those agents would actually adopt Contactually?</label><br>
+						<input type="number" id="agent-adoption" value=""><br>
 
-					<label for="agent-bringing-money">Number of agents that will use Contactually that could bring in more money</label><br>
-					<input type="number" id="agent-bringing-money" value=""><br>
+						<label for="agent-bringing-money">Number of agents that will use Contactually that could bring in more money</label><br>
+						<input type="number" id="agent-bringing-money" value=""><br>
 
-					<label for="total-roi">How much money Could Contactually bring the Brokerage</label><br>
-					<input type="number" id="total-roi" value=""><br>
-				<form>
+						<label for="total-roi">How much money Could Contactually bring the Brokerage</label><br>
+						<input type="number" id="total-roi" value=""><br>
+					<form>
+				</div>
+
 			</div>
-
 		</div>
 
 	</div>
